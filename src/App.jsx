@@ -13,8 +13,8 @@ export default function App() {
       {/* <Project2 /> */}
       {/* <Project3 noOfStars={10} /> */}
       {/* <Project4 /> */}
-      <Project5 />
-      {/* <Project6 /> */}
+      {/* <Project5 /> */}
+      <Project6 />
     </div>
   );
 }
