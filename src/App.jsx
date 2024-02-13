@@ -7,6 +7,8 @@ import Project5 from "./components/Project5";
 import Project6 from "./components/Project6";
 import Project7 from "./components/Project7";
 import Project8 from "./components/Project8";
+import Project9 from "./components/Project9";
+import Project10 from "./components/Project10";
 
 export default function App() {
   return (
@@ -18,7 +20,9 @@ export default function App() {
       {/* <Project5 /> */}
       {/* <Project6 /> */}
       {/* <Project7 /> */}
-      <Project8 url={"https://dummyjson.com/products"} />
+      {/* <Project8 url={"https://dummyjson.com/products"} /> */}
+      {/* <Project9 /> */}
+      <Project10 />
     </div>
   );
 }
