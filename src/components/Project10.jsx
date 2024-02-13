@@ -4,7 +4,8 @@ function Project10() {
   const [openModel, setOpenModel] = useState(false);
   return (
     <div className="bg-black h-[100vh] flex items-center justify-center text-white flex-col">
-      <h1>Project 10 : Open model</h1>
+      <h1 className="text-2xl mb-4 font-bold">Project 10 : Open model</h1>
+
       <button
         onClick={() => {
           setOpenModel(!openModel);
