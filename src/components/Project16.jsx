@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 function Project16() {
-  const [name, setName] = useState("Hyderabad");
+  const [name, setName] = useState("");
   const [data, setData] = useState([]);
   const [date, setDate] = useState(new Date());
-  // console.log(date);
-  if (data) {
-    console.log(data);
-  }
-  const fetchData = () => {
-    const apiKey = "yourapi";
 
-    axios
+  const fetchData = async (name) => {
+    const apiKey = "";
+
+    await axios
       .get(
         `https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${apiKey}`
       )
@@ -42,7 +39,7 @@ function Project16() {
           <button
             className="p-2 my-4 bg-black w-[245px] font-bold text-white h-[60px] rounded-l-none rounded-lg"
             onClick={() => {
-              fetchData();
+              fetchData(name);
             }}
           >
             Search
@@ -52,13 +49,18 @@ function Project16() {
         {data && data.wind && (
           <div className="flex items-center justify-center flex-col gap-5">
             <h1 className="text-black text-3xl text-center mt-6 font-serif font-bold ">
-              {data.name}
+              {data.name} ,<span>{data.sys.country}</span>
             </h1>
             <h1 className="text-black text-4xl text-center font-bold font-serif">
               {(data.main.temp - 273).toFixed(1)}°
             </h1>
             <h1 className="text-black text-2xl text-center font-serif">
-              {date.toDateString()}
+              {date.toLocaleDateString("en-us", {
+                weekday: "long",
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}
             </h1>
             <div className="flex items-center justify-center gap-5">
               <p>
