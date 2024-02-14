@@ -6,11 +6,11 @@ function Project16() {
   const [date, setDate] = useState(new Date());
 
   const fetchData = async (name) => {
-    const apiKey = "";
-
     await axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${apiKey}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${
+          import.meta.env.VITE_SECRET_KEY
+        }`
       )
       .then((result) => {
         console.log("Fetched Result from client server");
