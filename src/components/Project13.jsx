@@ -11,7 +11,6 @@ function Square({ value, onClick, disable }) {
     </button>
   );
 }
-
 function Project13() {
   const [XTurn, setXTurn] = useState(false);
   const [squares, setSquares] = useState(Array(9).fill(""));
@@ -36,12 +35,7 @@ function Project13() {
     checkColumn();
   }
   function IsDraw() {
-    for (let i = 0; i < 9; i++) {
-      if (squares[i] === "") {
-        return;
-      }
-    }
-    setDraw(true);
+    if (squares.every((item) => item !== "")) setDraw(true);
   }
   function checkDiagnol() {
     if (

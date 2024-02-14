@@ -12,6 +12,7 @@ import Project10 from "./components/Project10";
 import Project11 from "./components/Project11";
 import Project12 from "./components/Project12";
 import Project13 from "./components/Project13";
+import Project14 from "./components/Project14";
 
 export default function App() {
   return (
@@ -28,7 +29,8 @@ export default function App() {
       {/* <Project10 /> */}
       {/* <Project11 /> */}
       {/* <Project12 /> */}
-      <Project13 />
+      {/* <Project13 /> */}
+      <Project14 />
     </div>
   );
 }
