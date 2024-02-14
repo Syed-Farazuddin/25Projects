@@ -15,6 +15,7 @@ import React from "react";
 // import Project14 from "./components/Project14";
 // import Project15 from "./components/Project15";
 import Project16 from "./components/Project16";
+import Project17 from "./components/Project17";
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
       {/* <Project14 /> */}
       {/* <Project15 /> */}
       <Project16 />
+      {/* <Project17 /> */}
     </div>
   );
 }

@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 function Project16() {
-  const [name, setName] = useState("");
+  const [name, setName] = useState("Hyderabad");
   const [data, setData] = useState([]);
   const [date, setDate] = useState(new Date());
-  console.log(date);
+  // console.log(date);
+  if (data) {
+    console.log(data);
+  }
   const fetchData = () => {
-    const apiKey = "6be99bfe41c7aabe4c1915a26620bb59";
+    const apiKey = "yourapi";
 
     axios
       .get(
@@ -48,22 +51,23 @@ function Project16() {
 
         {data && data.wind && (
           <div className="flex items-center justify-center flex-col gap-5">
-            <h1 className="text-black text-2xl text-center mt-10 font-bold">
+            <h1 className="text-black text-3xl text-center mt-6 font-serif font-bold ">
               {data.name}
+            </h1>
+            <h1 className="text-black text-4xl text-center font-bold font-serif">
+              {(data.main.temp - 273).toFixed(1)}°
             </h1>
             <h1 className="text-black text-2xl text-center font-serif">
               {date.toDateString()}
             </h1>
-            <div className="flex gap-5">
+            <div className="flex items-center justify-center gap-5">
               <p>
                 Windspeed :{" "}
                 <span className="font-bold"> {data.wind.speed}</span>{" "}
               </p>
               <p>
-                Temperature :{" "}
-                <span className="font-bold">
-                  {(data.main.temp - 273).toFixed(1)} Degrees
-                </span>{" "}
+                Humidity :{" "}
+                <span className="font-bold">{data.main.humidity}</span>{" "}
               </p>
             </div>
           </div>
